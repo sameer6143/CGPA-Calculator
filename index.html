@@ -218,7 +218,6 @@ let gpArry = [];
 
 add.addEventListener("click", () => {
   if (
-
     unitLoad.value <= 0 ||
     grade.selectedIndex === 0
   ) {
@@ -254,9 +253,9 @@ calcGp.addEventListener("click", () => {
     sumOfProductOfUnitLoadsAndGrades = 0;
 
   gpArry.forEach((result) => {
-    unitLoads += parseInt(result.unitLoad);
+    unitLoads += parseFloat(result.unitLoad);
     productOfUnitLoadsAndGrades =
-      parseInt(result.unitLoad) * parseInt(result.grade);
+      parseFloat(result.unitLoad) * parseFloat(result.grade);
     sumOfProductOfUnitLoadsAndGrades += productOfUnitLoadsAndGrades;
   });
   const tr = document.createElement("tr");
